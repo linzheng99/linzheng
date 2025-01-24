@@ -39,6 +39,11 @@ export const projectType = defineType({
       type: 'url',
     },
     {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+    },
+    {
       name: 'content',
       title: 'Content',
       type: 'array',
