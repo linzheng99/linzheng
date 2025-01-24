@@ -5,7 +5,7 @@ export default function MainLayout({
 }>) {
   return (
     <main className="mx-auto w-full max-w-screen-2xl px-4">
-      <div className="min-h-screen pt-14">{children}</div>
+      <div className="min-h-screen pt-[56px]">{children}</div>
     </main>
   );
 }

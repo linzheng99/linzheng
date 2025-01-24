@@ -6,6 +6,11 @@ body {
   font-family: var(--font-karla);
   background: linear-gradient(135deg, #1c1e2c, #2a2d3b);
   color: #ffffff;
+  overscroll-behavior: none;
+}
+
+* {
+  scrollbar-width: none;
 }
 
 @layer base {
