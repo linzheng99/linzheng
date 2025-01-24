@@ -53,7 +53,7 @@ export default function Navbar() {
         visible ? "translate-y-0" : "-translate-y-full",
       )}
     >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-md shadow-md">
+      <div className="container-px backdrop-blur-md shadow-md">
         <div className="flex items-center justify-between h-[56px]">
           {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
