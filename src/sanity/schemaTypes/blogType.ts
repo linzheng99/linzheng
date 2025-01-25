@@ -1,13 +1,13 @@
 import { defineType } from 'sanity'
 
 export default defineType({
-  name: 'project',
-  title: 'Project',
+  name: 'blog',
+  title: 'Blog',
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
@@ -15,12 +15,12 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
       },
     },
     {
-      name: 'image',
-      title: 'Image',
+      name: 'coverImage',
+      title: 'Cover Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -34,20 +34,23 @@ export default defineType({
       ],
     },
     {
-      name: 'url',
-      title: 'URL',
-      type: 'url',
-    },
-    {
       name: 'description',
       title: 'Description',
       type: 'text',
+      rows: 2,
     },
     {
       name: 'content',
       title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'blockContent',
+    },
+    {
+      name: 'publishedAt',
+      title: 'Published At',
+      type: 'datetime',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+      },
     },
   ],
 })
