@@ -1,9 +1,11 @@
 import "./globals.css";
+import "./prism.css";
 
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 
 import Navbar from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 const karla = Karla({
   variable: "--font-karla",
@@ -26,6 +28,7 @@ export default function RootLayout({
         className={`${karla.variable} antialiased`}
       >
         <Navbar />
+        <Toaster />
         {children}
       </body>
     </html>
