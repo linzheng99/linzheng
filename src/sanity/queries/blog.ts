@@ -11,6 +11,7 @@ export async function getBlogs(): Promise<Blog[]> {
       title,
       "slug": slug.current,
       "coverImage": coverImage.asset->url,
+      category,
       description,
       content[]{
         ...,
@@ -31,6 +32,7 @@ export async function getBlogBySlug(slug: string): Promise<Blog> {
       title,
       "slug": slug.current,
       "coverImage": coverImage.asset->url,
+      category,
       description,
       content[]{
         ...,

@@ -18,6 +18,7 @@ export type Blog = {
   slug: string
   coverImage: string
   description: string
+  category: string
   content: PortableTextBlock[]
   publishedAt: string
 }

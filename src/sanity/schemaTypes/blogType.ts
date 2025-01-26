@@ -34,6 +34,11 @@ export default defineType({
       ],
     },
     {
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
