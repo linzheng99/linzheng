@@ -33,25 +33,27 @@ export default function PortableTextImage({ value }: PortableTextImageProps) {
               width={width}
               height={height}
               src={url}
-              alt={alt}
+              alt={alt || "image"}
               className="rounded-2xl group-hover:opacity-75 transition-all duration-300"
             />
-            <div className="hidden group-hover:flex absolute bottom-0 p-2 bg-white/10 backdrop-blur-md w-full rounded-br-2xl rounded-bl-2xl justify-center">
-              {label}
-            </div>
+            {label && (
+              <div className="hidden group-hover:flex absolute bottom-0 p-2 bg-white/10 backdrop-blur-md w-full rounded-br-2xl rounded-bl-2xl justify-center">
+                {label}
+              </div>
+            )}
           </div>
         </DialogTrigger>
-        <DialogContent className="bg-transparent border-none">
+        <DialogContent className="bg-transparent border-none max-w-[90vw] max-h-[90vh]">
           <DialogHeader>
-            <DialogTitle className="hidden" />
+            <DialogTitle className="sr-only">{alt || "图片"}</DialogTitle>
           </DialogHeader>
           <div className="w-full h-full flex items-center justify-center">
             <Image
-              width={width}
-              height={height}
               src={url}
               alt={alt}
-              className="rounded-2xl"
+              width={width}
+              height={height}
+              className="rounded-lg max-w-full max-h-full object-contain"
             />
           </div>
         </DialogContent>
