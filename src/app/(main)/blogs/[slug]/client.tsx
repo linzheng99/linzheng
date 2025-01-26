@@ -6,7 +6,7 @@ import { type Blog } from "@/sanity/types"
 
 export default function BlogClient({ blog }: { blog: Blog }) {
   return (
-    <div className="mt-10 max-w-7xl mx-auto">
+    <div className="mt-10 mx-auto">
       <BlogHeader blog={blog} />
       <BlogContent content={blog.content} />
     </div>

@@ -1,9 +1,16 @@
-import Link from "next/link";
 
+import BlogBentoGrid from "@/features/blog/components/blog-bento-grid";
+import BlogSign from "@/features/blog/components/blog-sign";
 import { getBlogs } from "@/sanity/queries/blog";
 
 export default async function BlogPage() {
-  const blogs = await getBlogs()
-  return <div>{blogs.map((blog) => <Link key={blog.slug} href={`/blogs/${blog.slug}`}>{blog.title}</Link>)}</div>;
+  const blogs = await getBlogs();
+  return (
+    <div className="mt-10">
+      <BlogSign />
+      <div className="mt-10">
+        <BlogBentoGrid blogs={blogs} />
+      </div>
+    </div>
+  );
 }
-
