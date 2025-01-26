@@ -13,6 +13,8 @@ export async function getProjects(): Promise<Project[]> {
       "image": image.asset->url,
       url,
       description,
+      startDate,
+      endDate,
       content
     }`
   )
@@ -28,6 +30,8 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
       "image": image.asset->url,
       url,
       description,
+      startDate,
+      endDate,
       content
     }`, { slug }
   )

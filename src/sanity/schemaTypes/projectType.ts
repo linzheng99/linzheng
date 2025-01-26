@@ -44,6 +44,16 @@ export default defineType({
       type: 'text',
     },
     {
+      name: 'startDate',
+      title: 'Start Date',
+      type: 'string',
+    },
+    {
+      name: 'endDate',
+      title: 'End Date',
+      type: 'string',
+    },
+    {
       name: 'content',
       title: 'Content',
       type: 'array',
