@@ -8,9 +8,7 @@ interface ProjectPageProps {
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params
-  console.log(slug)
   const project = await getProjectBySlug(slug)
-  console.log(project)
 
   if (!project) {
     return <div>Project not found</div>

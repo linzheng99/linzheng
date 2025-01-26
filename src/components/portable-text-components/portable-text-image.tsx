@@ -25,7 +25,7 @@ interface PortableTextImageProps {
 export default function PortableTextImage({ value }: PortableTextImageProps) {
   const { width, height, url, alt, label } = value
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full my-6">
       <Dialog>
         <DialogTrigger asChild>
           <div className="w-fit cursor-pointer relative group">
