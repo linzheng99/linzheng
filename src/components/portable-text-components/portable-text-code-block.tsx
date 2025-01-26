@@ -29,16 +29,16 @@ export default function PortableTextCodeBlock({ value }: PortableTextCodeBlockPr
   }
 
   return (
-    <div className="group relative rounded-xl border bg-black/80">
+    <div className="group relative rounded-xl border bg-black/80 m-2">
       <ClientOnly>
         <>
-          <div className="relative flex text-xs leading-6 text-slate-400">
+          <div className="relative flex text-xs leading-6">
             {Boolean(value.language) && (
-              <div className="flex items-center border-b px-4 py-1 font-medium border-b-emerald-200 text-emerald-200">
+              <div className="flex items-center border-b px-4 py-1 font-medium border-b-fuchsia-500 text-fuchsia-500">
                 {value.language}
               </div>
             )}
-            <div className="absolute right-0 top-1 flex h-8 items-center pr-4">
+            <div className="absolute right-0 top-0 flex h-8 items-center pr-4">
               <Hint label="copy">
                 <button
                   type="button"
