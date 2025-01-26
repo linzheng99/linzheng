@@ -17,7 +17,7 @@ export default function UserCard() {
       transition={{ duration: 0.5 }}
     >
       <CardContainer className="bg-[#232323]/75 border border-white/10 rounded-xl">
-        <CardBody className="relative group/card bg-transparent hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 flex flex-col items-center">
+        <CardBody className="relative group/card bg-transparent hover:shadow-2xl hover:shadow-rose-500/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 flex flex-col items-center">
           <CardItem
             translateZ="50"
             className="text-xl font-bold text-white text-center"

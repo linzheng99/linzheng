@@ -54,7 +54,7 @@ export default function Navbar() {
         visible ? "translate-y-0" : "-translate-y-full",
       )}
     >
-      <div className="container-px backdrop-blur-md shadow-md">
+      <div className="container-px backdrop-blur-md group shadow-md">
         <div className="flex items-center justify-between h-[56px]">
           {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
@@ -65,6 +65,9 @@ export default function Navbar() {
               {isOpen ? <X className="h-6 w-6" /> : <AlignLeft className="h-6 w-6" />}
             </button>
           </div>
+
+          {/* hover line */}
+          <span className="absolute -bottom-px left-[2.5rem] h-px w-[calc(100%-5rem)] bg-gradient-to-r from-fuchsia-500/0 via-fuchsia-500/80 to-sky-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
           <DesktopNavigation navItems={navItems} pathname={pathname} />
         </div>
