@@ -9,7 +9,7 @@ export default function BlogHeader({ blog }: { blog: Blog }) {
       <div className="w-full max-h-[400px]">
         <BlogCoverImage url={blog.coverImage} />
       </div>
-      <div className="w-full mb-8">
+      <div className="w-full">
         <BlogCard blog={blog} />
       </div>
     </div>
