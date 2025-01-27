@@ -16,7 +16,7 @@ export default function UserCard() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <CardContainer className="bg-[#232323]/75 border border-white/10 rounded-xl">
+      <CardContainer className="bg-white/5 border border-white/15 rounded-xl">
         <CardBody className="relative group/card bg-transparent hover:shadow-2xl hover:shadow-rose-500/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 flex flex-col items-center">
           <CardItem
             translateZ="50"

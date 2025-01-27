@@ -4,7 +4,7 @@ import { getProjects } from "@/sanity/queries/project";
 
 export default async function ProjectPage() {
   const projects = await getProjects();
-  console.log(projects);
+
   return (
     <div className="mt-10 w-full">
       <ProjectSign />

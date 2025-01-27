@@ -35,7 +35,7 @@ export const TextGenerateEffect = ({
     }, delay * 1000);
 
     return () => clearTimeout(timer);
-  }, [scope.current]);
+  }, [animate, delay, duration, filter]);
 
   const renderWords = () => {
     return (

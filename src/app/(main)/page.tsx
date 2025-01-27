@@ -6,7 +6,7 @@ import { getBlogs } from "@/sanity/queries/blog";
 
 export default async function Home() {
   const blogs = await getBlogs(6);
-  const words = 'Little by little, every day.'
+  const words = 'Little by little , every day . You will be better.'
   const words1 = '每 天 进 步 一 点 点 .'
   return (
     <div className="w-full h-full">
