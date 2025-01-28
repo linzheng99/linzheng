@@ -9,7 +9,7 @@ interface BlogPageProps {
 }
 
 
-export default async function BlogPage({ params }: BlogPageProps) {
+export default async function BlogSlugPage({ params }: BlogPageProps) {
   const { slug } = await params
   const blog = await getBlogBySlug(slug)
 
