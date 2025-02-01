@@ -9,7 +9,7 @@ export default async function Home() {
   const words = 'Little by little , every day . You will be better.'
   const words1 = '每 天 进 步 一 点 点 .'
   return (
-    <div className="w-full h-full">
+    <div className="w-full min-h-[100dvh]">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <UserCard />
         <div className="flex flex-col items-center justify-center pb-20">

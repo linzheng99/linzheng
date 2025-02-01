@@ -20,7 +20,7 @@ export default function BlogBentoGrid({ blogs }: { blogs: Blog[] }) {
   }));
 
   return (
-    <BentoGrid className="mx-auto">
+    <BentoGrid className="mx-auto mb-4">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}

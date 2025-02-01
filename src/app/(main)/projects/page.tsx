@@ -8,7 +8,7 @@ export default async function ProjectPage() {
   return (
     <div className="mt-10 w-full h-full">
       <ProjectSign />
-      <div className="mt-10 flex flex-col gap-10">
+      <div className="my-10 flex flex-col gap-10">
         {projects.map((project) => (
           <ProjectCard key={project._id} project={project} />
         ))}
