@@ -6,7 +6,7 @@ export default async function ProjectPage() {
   const projects = await getProjects();
 
   return (
-    <div className="mt-10 w-full min-h-screen">
+    <div className="mt-10 w-full h-full">
       <ProjectSign />
       <div className="mt-10 flex flex-col gap-10">
         {projects.map((project) => (

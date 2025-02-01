@@ -10,7 +10,7 @@ import { type Blog } from "@/sanity/types"
 
 export default function BlogSlugClient({ blog }: { blog: Blog }) {
   return (
-    <div className="mt-10 mx-auto relative">
+    <div className="mt-10 mx-auto relative min-h-[100dvh]">
       <BlogHeader blog={blog} />
       <DottedSeparator className="my-6" color="#9cA3AF" />
       <BlogContent content={blog.content} />
