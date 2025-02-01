@@ -67,7 +67,7 @@ export default function Navbar() {
           </div>
 
           {/* hover line */}
-          <span className="absolute -bottom-px left-[2.5rem] h-px w-[calc(100%-5rem)] bg-gradient-to-r from-fuchsia-500/0 via-fuchsia-500/80 to-sky-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <span className="absolute -bottom-px left-[2.5rem] h-px w-[calc(100%-5rem)] bg-gradient-to-r from-gray-500/0 via-gray-500/80 to-gray-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
           <DesktopNavigation navItems={navItems} pathname={pathname} />
         </div>

@@ -1,4 +1,7 @@
+'use client'
+
 import { PortableText, type PortableTextBlock, type PortableTextComponents } from "@portabletext/react"
+import { motion, useScroll } from "motion/react"
 
 import PortableTextH1 from "@/components/portable-text-components/portable-text-block-h1"
 import PortableTextH2 from "@/components/portable-text-components/portable-text-block-h2"
@@ -37,7 +40,25 @@ const components: PortableTextComponents = {
 }
 
 export default function BlogContent({ content }: { content: PortableTextBlock[] }) {
+  const { scrollYProgress } = useScroll()
+  console.log(content)
   return (
-    <PortableText value={content} components={components} />
+    <>
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 2,
+          originX: 0,
+          zIndex: 2,
+          backgroundColor: "#ff0088",
+        }}
+      />
+      <PortableText value={content} components={components} />
+    </>
   )
 }

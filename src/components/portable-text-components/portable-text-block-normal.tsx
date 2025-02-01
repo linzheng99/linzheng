@@ -2,7 +2,7 @@ import { type PortableTextBlock, type PortableTextComponentProps } from "@portab
 
 export default function PortableTextBlockNormal({ children }: PortableTextComponentProps<PortableTextBlock>) {
   return (
-    <p className="text-base py-3 font-normal text-gray-50">
+    <p className="text-base p-2 font-normal text-gray-50">
       {children}
     </p>
   );

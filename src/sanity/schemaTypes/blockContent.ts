@@ -86,6 +86,11 @@ export default defineType({
           title: 'Language',
           type: 'string',
         },
+        {
+          name: 'label',
+          title: 'Label',
+          type: 'string',
+        },
       ],
     }),
   ],

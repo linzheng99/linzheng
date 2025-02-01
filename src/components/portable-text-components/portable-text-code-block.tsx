@@ -1,6 +1,6 @@
 'use client'
 
-import { Clipboard, ClipboardCheck } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -12,6 +12,7 @@ interface PortableTextCodeBlockProps {
     _key: string
     code: string
     language: string
+    label: string
   }
 }
 
@@ -32,19 +33,19 @@ export default function PortableTextCodeBlock({ value }: PortableTextCodeBlockPr
       <div className="relative flex text-xs leading-6">
         {Boolean(value.language) && (
           <div className="flex items-center border-b px-4 py-1 font-medium border-b-fuchsia-500 text-fuchsia-500">
-            {value.language}
+            {value.label || value.language}
           </div>
         )}
         <div className="absolute right-0 top-0 flex h-8 items-center pr-4">
-          <Hint label="copy">
+          <Hint label="Copy">
             <button
               type="button"
               onClick={onClickCopy}
             >
               {hasCopied ? (
-                <ClipboardCheck className='h-4 w-4' />
+                <Check className='h-4 w-4' />
               ) : (
-                <Clipboard className='h-4 w-4' />
+                <Copy className='h-4 w-4' />
               )}
             </button>
           </Hint>
