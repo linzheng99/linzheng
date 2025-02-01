@@ -6,7 +6,7 @@ import { getBlogs } from "@/sanity/queries/blog";
 export default async function BlogsPage() {
   const blogs = await getBlogs();
   return (
-    <div className="mt-10">
+    <div className="mt-10 min-h-screen">
       <BlogSign />
       <div className="mt-10">
         <BlogBentoGrid blogs={blogs} />
