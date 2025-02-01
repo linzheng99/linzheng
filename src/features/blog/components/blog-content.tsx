@@ -1,7 +1,9 @@
 'use client'
 
 import { PortableText, type PortableTextBlock, type PortableTextComponents } from "@portabletext/react"
+import { Undo2 } from "lucide-react"
 import { motion, useScroll } from "motion/react"
+import Link from "next/link"
 
 import PortableTextH1 from "@/components/portable-text-components/portable-text-block-h1"
 import PortableTextH2 from "@/components/portable-text-components/portable-text-block-h2"
@@ -15,6 +17,8 @@ import PortableTextListBullet from "@/components/portable-text-components/portab
 import PortableTextListNumber from "@/components/portable-text-components/portable-text-list-number"
 import PortableTextMarksCode from "@/components/portable-text-components/portable-text-marks-code"
 import PortableTextMarksLink from "@/components/portable-text-components/portable-text-marks-link"
+import { TableOfContents } from "@/components/table-of-contents"
+import { processHeadings } from "@/lib/process-headings"
 
 const components: PortableTextComponents = {
   block: {
@@ -41,7 +45,7 @@ const components: PortableTextComponents = {
 
 export default function BlogContent({ content }: { content: PortableTextBlock[] }) {
   const { scrollYProgress } = useScroll()
-  console.log(content)
+  const headings = processHeadings(content)
   return (
     <>
       <motion.div
@@ -58,7 +62,17 @@ export default function BlogContent({ content }: { content: PortableTextBlock[] 
           backgroundColor: "#ff0088",
         }}
       />
-      <PortableText value={content} components={components} />
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-2 sticky top-4 self-start flex flex-col gap-4">
+          <Link href="/blogs" className="w-10 h-10 bg-white/5 rounded-full border border-white/15 hover:border-white/25 transition-colors duration-300 items-center justify-center cursor-pointer hidden sm:flex">
+            <Undo2 className="w-4 h-4" />
+          </Link>
+          <TableOfContents headings={headings} className="w-full" />
+        </div>
+        <div className="col-span-10">
+          <PortableText value={content} components={components} />
+        </div>
+      </div>
     </>
   )
 }
