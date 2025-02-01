@@ -45,7 +45,6 @@ const itemVariants = {
 } satisfies Variants
 
 export function TableOfContents({ headings, className }: TableOfContentsProps) {
-  console.log(headings)
   const renderHeadings = (nodes: HeadingNode[]) => {
     return (
       <motion.ul
