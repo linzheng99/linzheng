@@ -63,13 +63,13 @@ export default function BlogContent({ content }: { content: PortableTextBlock[] 
         }}
       />
       <div className="grid grid-cols-12 gap-4">
-        <div className="col-span-2 sticky top-4 self-start flex flex-col gap-4">
-          <Link href="/blogs" className="w-10 h-10 bg-white/5 rounded-full border border-white/15 hover:border-white/25 transition-colors duration-300 items-center justify-center cursor-pointer hidden sm:flex">
+        <div className="hidden sm:col-span-2 sticky top-4 self-start sm:flex flex-col gap-4">
+          <Link href="/blogs" className="w-10 h-10 bg-white/5 rounded-full border border-white/15 hover:border-white/25 transition-colors duration-300 items-center justify-center cursor-pointer flex">
             <Undo2 className="w-4 h-4" />
           </Link>
           <TableOfContents headings={headings} className="w-full" />
         </div>
-        <div className="col-span-10">
+        <div className="col-span-12 sm:col-span-10">
           <PortableText value={content} components={components} />
         </div>
       </div>
