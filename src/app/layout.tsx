@@ -14,7 +14,10 @@ const karla = Karla({
 
 export const metadata: Metadata = {
   title: "linzheng's",
-  description: "personal website",
+  description: "linzheng's personal website",
+  icons: {
+    icon: "/avatar.jpeg",
+  },
 };
 
 export default function RootLayout({

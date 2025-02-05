@@ -1,7 +1,13 @@
+import { type Metadata } from "next";
 
 import BlogBentoGrid from "@/features/blog/components/blog-bento-grid";
 import BlogSign from "@/features/blog/components/blog-sign";
 import { getBlogs } from "@/sanity/queries/blog";
+
+export const metadata: Metadata = {
+  title: "linzheng's - blogs",
+  description: 'This is the blogs page',
+};
 
 export default async function BlogsPage() {
   const blogs = await getBlogs();

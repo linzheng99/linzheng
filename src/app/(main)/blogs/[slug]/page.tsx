@@ -1,3 +1,5 @@
+import { type Metadata } from "next";
+
 import { getBlogBySlug } from "@/sanity/queries/blog";
 
 import BlogClient from "./client";
@@ -6,6 +8,13 @@ interface BlogPageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  return {
+    title: `linzheng's - ${slug}`,
+  };
 }
 
 
