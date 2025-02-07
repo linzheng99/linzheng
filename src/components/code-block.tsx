@@ -11,7 +11,7 @@ interface CodeBlockProps {
 const CodeBlock = ({ code, language }: CodeBlockProps) => {
   return (
     <div className={cn(
-      'py-2 overflow-x-auto',
+      'py-2 overflow-x-auto max-h-[550px] overflow-y-auto',
       language === 'bash' && 'px-4'
     )}>
       <SyntaxHighlighter
