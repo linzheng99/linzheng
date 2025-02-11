@@ -29,18 +29,19 @@ export default function PortableTextCodeBlock({ value }: PortableTextCodeBlockPr
   }
 
   return (
-    <div className="group relative rounded-xl border bg-black/80 m-2">
-      <div className="relative flex text-xs leading-6">
+    <div className="group relative rounded-lg border bg-black/80 m-3 shadow-lg">
+      <div className="flex w-full relative">
         {Boolean(value.language) && (
-          <div className="flex items-center border-b px-4 py-1 font-medium border-b-fuchsia-500 text-fuchsia-500">
+          <div className="flex items-center border-b px-4 py-1 font-medium text-sm border-b-fuchsia-500 text-fuchsia-500">
             {value.label || value.language}
           </div>
         )}
-        <div className="absolute right-0 top-0 flex h-8 items-center pr-4">
+        <div className="flex items-center justify-end pr-4 px-4 py-2 border-b border-b-gray-700 w-full">
           <Hint label="Copy">
             <button
               type="button"
               onClick={onClickCopy}
+              className="hover:scale-110 transition"
             >
               {hasCopied ? (
                 <Check className='h-4 w-4' />
