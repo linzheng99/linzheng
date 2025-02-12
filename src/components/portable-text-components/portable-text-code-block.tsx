@@ -32,7 +32,7 @@ export default function PortableTextCodeBlock({ value }: PortableTextCodeBlockPr
     <div className="group relative rounded-lg border bg-black/80 m-3 shadow-lg">
       <div className="flex w-full relative">
         {Boolean(value.language) && (
-          <div className="flex items-center border-b px-4 py-1 font-medium text-sm border-b-fuchsia-500 text-fuchsia-500">
+          <div className="flex items-center border-b px-4 py-1 font-medium text-sm border-b-fuchsia-500 text-fuchsia-500 text-nowrap">
             {value.label || value.language}
           </div>
         )}
